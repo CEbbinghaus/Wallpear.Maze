@@ -1,24 +1,16 @@
 {
+	"description" : "",
 	"file" : "index.html",
 	"general" : 
 	{
 		"properties" : 
 		{
-			"uspeed" : {
-				"max" : 1000,
-				"min" : 10,
-				"order" : 1,
-				"text" : "Update Speed",
-				"type" : "slider",
-				"value" : 300
-			},
-			"Size" : {
-				"max" : 200,
-				"min" : 20,
-				"order" : 2,
-				"text" : "Maze Size",
-				"type" : "slider",
-				"value" : 18
+			"BCol" : 
+			{
+				"order" : 4,
+				"text" : "Backround Color",
+				"type" : "color",
+				"value" : "#FFFFFF"
 			},
 			"FCol" : 
 			{
@@ -27,12 +19,30 @@
 				"type" : "color",
 				"value" : "#000000"
 			},
-			"BCol" : 
+			"Size" : 
 			{
-				"order" : 4,
-				"text" : "Backround Color",
+				"max" : 200,
+				"min" : 20,
+				"order" : 2,
+				"text" : "Maze Size",
+				"type" : "slider",
+				"value" : 18
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
 				"type" : "color",
-				"value" : "#FFFFFF"
+				"value" : "0 0 0"
+			},
+			"uspeed" : 
+			{
+				"max" : 1000,
+				"min" : 10,
+				"order" : 1,
+				"text" : "Update Speed",
+				"type" : "slider",
+				"value" : 300
 			}
 		}
 	},
@@ -40,5 +50,6 @@
 	"tags" : [ "Abstract" ],
 	"title" : "WallPear.Maze",
 	"type" : "web",
-	"visibility" : "public"
+	"visibility" : "public",
+	"workshopid" : 1216514825
 }
