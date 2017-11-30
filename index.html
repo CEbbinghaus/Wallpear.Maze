@@ -1,0 +1,16 @@
+<style>
+body {
+margin: 0;
+padding: 0;
+}
+#t {
+    font-family: times;
+}
+</style>
+<body>
+<p id="t">
+<script>
+var Size=50;var w=Math.ceil(window.innerWidth/Size)+1;var h=Math.ceil(window.innerHeight/Size)+1;var m=createMaze();var UpdateTime=100;var FGC="#0000--";var BGC="#FFFFFF";window.wallpaperPropertyListener={applyUserProperties:function(properties){if(properties.uspeed){UpdateTime=properties.uspeed.value;}if(properties.Size){Size=properties.Size.value;w=Math.ceil(window.innerWidth/Size)+1;h=Math.ceil(window.innerHeight/Size)+1;d("t").style.lineHeight=Size+"px";d("t").style.fontSize=Size+"px";m=createMaze()}if(properties.FCol){FGC=getHEX(properties.FCol.value);d("t").style.color=FGC}if(properties.BCol){BGC=getHEX(properties.BCol.value);d("t").style.backgroundColor=BGC}}};d("t").style.color=FGC;d("t").style.backgroundColor=BGC;Array.prototype.drawMaze=function(aw){let t="";this.forEach((me,i)=>{if(i%aw==0&&i!=0){t+="<br>"}else{t+=me}});d("t").innerHTML=t};function createMaze(){let maze=[];let a=w*h;for(let i=1;i<a;i++){let s=(Math.floor((Math.random()*2)%2))?"╱":"╲";maze.push(s)}return maze}document.documentElement.style.overflow='hidden';m.drawMaze(w);function d(l){return document.getElementById(l)}function Update(){let I=Math.round(Math.random()*m.length);m[I]=m[I]=="╱"?"╲":"╱";m.drawMaze(w);window.setTimeout(()=>{Update()},UpdateTime)}function getHEX(v){if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(v)){return v}let j=v.split(" ");for(let i=0;i<j.length;i++){j[i]=parseFloat(j[i])*255;j[i]=j[i].toString(16);if(j[i].length<2){j[i]="0"+j[i]}}return j="#"+j.join("")}Update();
+</script>
+</p>
+</body>
